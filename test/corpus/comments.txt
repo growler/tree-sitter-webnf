@@ -1,0 +1,22 @@
+=======
+Comment
+=======
+
+/* a comment */
+
+---
+
+(grammar (comment))
+
+=====================
+Comment in production
+=====================
+
+character = /* any unicode character */ .
+
+---
+
+(grammar 
+  (production
+    name: (terminal_identifier)
+    (comment)))

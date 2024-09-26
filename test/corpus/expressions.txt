@@ -1,0 +1,66 @@
+=====
+Token
+=====
+
+a = "a" .
+b = `b` .
+
+---
+
+(grammar 
+  (production name: (terminal_identifier) (token))
+  (production name: (terminal_identifier) (token)))
+
+===========================
+Token range (character set)
+===========================
+
+a = "(" "a" … "z" ")" .
+
+---
+
+(grammar
+  (production
+    name: (terminal_identifier)
+    (token)
+    (range begin: (token) end: (token))
+    (token)))
+
+======
+Option
+======
+
+A = [ "B" ].
+
+---
+
+(grammar
+  (production
+    name: (identifier)
+    (option (token))))
+
+=====
+Group
+=====
+
+A = ( "B" | "C" ).
+
+---
+
+(grammar
+  (production
+    name: (identifier)
+    (group (token) (token))))
+
+==========
+Repetition
+==========
+
+A = { "B" }.
+
+---
+
+(grammar
+  (production
+    name: (identifier)
+    (repetition (token))))
