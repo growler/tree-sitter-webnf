@@ -1,0 +1,5 @@
+token = "a" … "z" .
+/* ^ definition.class */
+tokens = { token } .
+/* ^ definition.class
+             ^ reference.class */

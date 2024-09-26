@@ -53,6 +53,7 @@
     "scope": "source.wsn",
     "injection-regex": "^(wsn|wbnf)$",
     "file-types": ["wsn", "wbnf"],
-    "highlights": "queries/highlights.scm"
+    "highlights": "queries/highlights.scm",
+    "tags": "queries/tags.scm"
   }]
 }
