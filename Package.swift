@@ -2,16 +2,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "TreeSitterWsn",
+    name: "TreeSitterWebnf",
     products: [
-        .library(name: "TreeSitterWsn", targets: ["TreeSitterWsn"]),
+        .library(name: "TreeSitterWebnf", targets: ["TreeSitterWebnf"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ChimeHQ/SwiftTreeSitter", from: "0.8.0"),
     ],
     targets: [
         .target(
-            name: "TreeSitterWsn",
+            name: "TreeSitterWebnf",
             dependencies: [],
             path: ".",
             exclude: [
@@ -48,12 +48,12 @@ let package = Package(
             cSettings: [.headerSearchPath("src")]
         ),
         .testTarget(
-            name: "TreeSitterWsnTests",
+            name: "TreeSitterWebnfTests",
             dependencies: [
                 "SwiftTreeSitter",
-                "TreeSitterWsn",
+                "TreeSitterWebnf",
             ],
-            path: "bindings/swift/TreeSitterWsnTests"
+            path: "bindings/swift/TreeSitterWebnfTests"
         )
     ],
     cLanguageStandard: .c11

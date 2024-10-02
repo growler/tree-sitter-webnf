@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-wirth-syntax-notation",
+  "name": "tree-sitter-webnf",
   "version": "1.0.0",
-  "description": "A tree-sitter parser for Wirth Syntax Notation, a variant of EBNF, used in Golang Language Specification",
+  "description": "A tree-sitter parser for Wirth's variant of EBNF (Wirth Syntax Notation), mostly used in Golang Language Specification",
   "main": "index.js",
   "types": "bindings/node",
   "scripts": {
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/growler/tree-sitter-wirth-syntax-notation.git"
+    "url": "git+https://github.com/growler/tree-sitter-webnf.git"
   },
   "keywords": [
     "tree-sitter",
-    "BNF"
+    "EBNF"
   ],
   "files": [
     "grammar.js",
@@ -30,9 +30,9 @@
   "author": "Alexey Naidyonov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/growler/tree-sitter-wirth-syntax-notation/issues"
+    "url": "https://github.com/growler/tree-sitter-webnf/issues"
   },
-  "homepage": "https://github.com/growler/tree-sitter-wirth-syntax-notation#readme",
+  "homepage": "https://github.com/growler/tree-sitter-webnf#readme",
   "dependencies": {
     "node-addon-api": "^8.0.0",
     "node-gyp-build": "^4.8.1"
@@ -50,9 +50,9 @@
     "prebuildify": "^6.0.1"
   },
   "tree-sitter": [{
-    "scope": "source.wsn",
-    "injection-regex": "^(wsn|wbnf)$",
-    "file-types": ["wsn", "wbnf"],
+    "scope": "source.webnf",
+    "injection-regex": "^(wsn|webnf)$",
+    "file-types": ["wsn", "webnf"],
     "highlights": "queries/highlights.scm",
     "tags": "queries/tags.scm"
   }]

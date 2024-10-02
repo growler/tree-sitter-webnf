@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: "wsn",
+  name: "webnf",
   extras: $ => [
     / |\n|\t|\r/,
     $.comment,

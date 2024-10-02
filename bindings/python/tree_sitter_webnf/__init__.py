@@ -1,4 +1,4 @@
-"""Wsn grammar for tree-sitter"""
+"""Webnf grammar for tree-sitter"""
 
 from importlib.resources import files as _files
 

@@ -1,4 +1,4 @@
-//! This crate provides Wsn language support for the [tree-sitter][] parsing library.
+//! This crate provides Webnf language support for the [tree-sitter][] parsing library.
 //!
 //! Typically, you will use the [language][language func] function to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
@@ -7,10 +7,10 @@
 //! let code = r#"
 //! "#;
 //! let mut parser = tree_sitter::Parser::new();
-//! let language = tree_sitter_wsn::LANGUAGE;
+//! let language = tree_sitter_webnf::LANGUAGE;
 //! parser
 //!     .set_language(&language.into())
-//!     .expect("Error loading Wsn parser");
+//!     .expect("Error loading Webnf parser");
 //! let tree = parser.parse(code, None).unwrap();
 //! assert!(!tree.root_node().has_error());
 //! ```
@@ -23,11 +23,11 @@
 use tree_sitter_language::LanguageFn;
 
 extern "C" {
-    fn tree_sitter_wsn() -> *const ();
+    fn tree_sitter_webnf() -> *const ();
 }
 
 /// The tree-sitter [`LanguageFn`] for this grammar.
-pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_wsn) };
+pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_webnf) };
 
 /// The content of the [`node-types.json`][] file for this grammar.
 ///
@@ -48,6 +48,6 @@ mod tests {
         let mut parser = tree_sitter::Parser::new();
         parser
             .set_language(&super::LANGUAGE.into())
-            .expect("Error loading Wsn parser");
+            .expect("Error loading Webnf parser");
     }
 }

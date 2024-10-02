@@ -2,10 +2,10 @@ prefix=@PREFIX@
 libdir=@LIBDIR@
 includedir=@INCLUDEDIR@
 
-Name: tree-sitter-wsn
-Description: Wsn grammar for tree-sitter
+Name: tree-sitter-webnf
+Description: Webnf grammar for tree-sitter
 URL: @URL@
 Version: @VERSION@
 Requires: @REQUIRES@
-Libs: -L${libdir} @ADDITIONAL_LIBS@ -ltree-sitter-wsn
+Libs: -L${libdir} @ADDITIONAL_LIBS@ -ltree-sitter-webnf
 Cflags: -I${includedir}

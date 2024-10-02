@@ -1,15 +1,15 @@
 ;;;; Simple tokens ;;;;
-(token) @string.special.symbol
+(token) @constant
 (comment) @comment
 
 ;;;; Identifiers ;;;;
 (production
-  name: [(identifier) (terminal_identifier)] @type.definition)
+  name: [(identifier) (terminal_identifier)] @type)
 
 [(identifier) (terminal_identifier)] @type
 
 ;;; Punctuation ;;;;
 [ "." ] @punctuation.delimiter
-[ "=" "|" "…" ] @operator
+[ "…" ] @punctuation.special
+[ "=" "|" ] @operator
 [ "(" ")" "[" "]" "{" "}" ] @punctuation.bracket
-
